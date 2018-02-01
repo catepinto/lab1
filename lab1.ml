@@ -178,9 +178,9 @@ Exercise 7: Define a recursive function that sums an integer
 list. (What's a sensible return value for the empty list?)
 ......................................................................*)
 
-let sum (lst : int list) : int =
+let rec sum (lst : int list) : int =
   match lst with
-  | [] -> 0
+  | [ ] -> 0
   | hd :: tl -> hd + (sum tl);;
   
 (*......................................................................
